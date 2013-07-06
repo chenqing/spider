@@ -1,60 +1,12 @@
 #!/usr/bin/python
 #coding=utf-8
-import threading
-from Queue import Queue
-import  sqlite3
-
 from dytt8.dytt8 import dytt8
+from xunbo.xunbo import xunbo
+from mythread    import mythread
 
-dy = dytt8(10)
+#dytt8 = dytt8(5)
 
-db = sqlite3.connect("/Users/chenqing/hellopy/spider/spider.db")
+print "开始抓取迅播前三页的电影链接。。。"
+xunbo = xunbo(3)
 
-link = db.cursor()
-
-ftp_urls = []
-
-
-class ThreadUrl(threading.Thread):
-
-
-    def __init__(self,queue):
-        threading.Thread.__init__(self)
-        self.queue = queue
-
-    def run(self):
-
-        while True:
-            url = self.queue.get()
-
-            t = dy.ftp_url(url)
-            if len(t) > 1:
-                ftp_urls.append(t)
-            self.queue.task_done()
-
-
-
-if __name__ == '__main__':
-
-    queue = Queue()
-
-    for i in range(20):
-
-        t= ThreadUrl(queue)
-
-        t.setDaemon(True)
-
-        t.start()
-
-
-    for url in dy.http_url():
-
-        queue.put(url)
-
-        queue.join()
-
-    for ftp_url in ftp_urls:
-        print ftp_url
-
-
-    db.close()
+mythread(xunbo)

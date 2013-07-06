@@ -20,3 +20,11 @@ spider
     ftp://dy:dy@xlj.2tu.cc:30275/[迅雷下载www.2tu.cc]松林外.DVD英语中字.rmvb
     ftp://dy:dy@xla.xunbo.cc:20395/[迅雷下载www.XunBo.Cc]亲密敌人.DVDsrc国语中字.rmvb
     .......
+sqlite3:
+------
+    [ chenqing@Qing ~/hellopy/spider  ] sqlite3 spider.db
+    SQLite version 3.7.12 2012-04-03 19:43:07
+    Enter ".help" for instructions
+    Enter SQL statements terminated with a ";"
+    sqlite> select * from sqlite_master where type="table" and name="ftp_url";
+    table|ftp_url|ftp_url|4|CREATE TABLE `ftp_url` ( `id` INTEGER PRIMARY KEY  NOT NULL , `url` varchar(120) DEFAULT NULL)

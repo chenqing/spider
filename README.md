@@ -11,5 +11,12 @@ spider
     
 用法：
 -----
-    
-    
+    [ chenqing@qing ~/hellopy/spider ] python spider.py 
+    开始抓取迅播前三页的电影链接。。。
+    ftp://dy:dy@xlj.2tu.cc:30358/[迅雷下载www.2tu.cc]分手合约.HD1024高清国语中字.rmvb
+    ftp://dy:dy@xlj.2tu.cc:20345/[迅雷下载www.2tu.cc]速度与激情6.BD1024高清英语中字.rmvb
+    ftp://dy:dy@xlj.2tu.cc:10305/[迅雷下载www.2tu.cc]同谋.HD1024高清国语中字.rmvb
+    ftp://dy:dy@xlj.2tu.cc:20346/[迅雷下载www.2tu.cc]守门人.BD1024高清中英双字.rmvb
+    ftp://dy:dy@xlj.2tu.cc:30275/[迅雷下载www.2tu.cc]松林外.DVD英语中字.rmvb
+    ftp://dy:dy@xla.xunbo.cc:20395/[迅雷下载www.XunBo.Cc]亲密敌人.DVDsrc国语中字.rmvb
+    .......
